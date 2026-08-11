@@ -1,0 +1,272 @@
+:root {
+            --primary-color: #003d4c;
+            --secondary-color: #b3e0ff;
+            --tertiary-color: #ffeadb;
+            --quaternary-color: #fff7e3;
+            --text-color: #333;
+            --link-color: #007ea7;
+            --hover-color: #005f73;
+            --background-color: #f7f3f0;
+            --header-bg-color: #e0f7ff;
+            --footer-bg-color: var(--primary-color);
+            --pagination-bg-color: #f1f1f1;
+            font-size: 110%;
+        }
+
+        body {
+            font-family: 'Vazir', Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .menu {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav .menu a {
+            font-size: 1.2rem;
+            color: white;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s;
+        }
+
+        nav .menu a:hover {
+            border-bottom: 2px solid var(--link-color);
+        }
+
+        .hero {
+            background-color: var(--header-bg-color);
+            padding: 3rem 1.5rem;
+            text-align: center;
+            border-radius: 15px;
+            margin: 3rem auto;
+            max-width: 90%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-container {
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            padding: 3rem;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .flex-container {
+            display: flex;
+            gap: 2rem;
+            justify-content: space-between;
+            margin: 3rem auto;
+            max-width: 90%;
+            flex-wrap: wrap;
+        }
+
+        .flex-box {
+            font-size: 1.2rem;
+            text-align: justify;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            flex: 1;
+            min-width: 250px;
+            position: relative;
+        }
+
+        .flex-box:nth-child(1) {
+            background: linear-gradient(135deg, var(--secondary-color), #d1f4ff);
+            border: 3px solid #b3e5ff;
+        }
+
+        .flex-box:nth-child(2) {
+            background: linear-gradient(135deg, var(--tertiary-color), #ffd4c2);
+            border: 3px solid #ffb4a1;
+        }
+
+        .flex-box:nth-child(3) {
+            background: linear-gradient(135deg, var(--quaternary-color), #fff0c1);
+            border: 3px solid #ffe39a;
+        }
+
+        .flex-box h3 {
+            font-size: 2rem;
+            margin-top: 0;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        .flex-box ul {
+            list-style: disc inside;
+            margin-top: 1rem;
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 90%;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background-color: var(--quaternary-color);
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+        }
+
+        .video-container::before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            z-index: -1;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+       .pagination {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .pagination a {
+            text-decoration: none;
+            color: #004d63;
+            padding: 10px 20px;
+            margin: 0 8px;
+            font-size: 18px;
+            border: 1px solid #004d63;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .pagination a.active {
+            background-color: #004d63;
+            color: #ffffff;
+        }
+
+        .pagination a:hover {
+            background-color: #003d4c;
+            color: #ffffff;
+        }
+        footer {
+            background-color: var(--footer-bg-color);
+            color: white;
+            padding: 2.5rem;
+            text-align: center;
+        }
+
+        footer .footer-menu {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer .footer-menu a {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer .footer-menu a:hover {
+            color: var(--hover-color);
+        }
+         /* استایل‌های ویجت تاریخ */
+        .date-widget {
+            position: fixed;
+            top: 10px;  /* قرارگیری در بالای صفحه */
+            right: 20px; /* فاصله از سمت راست صفحه */
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #333;
+            z-index: 1000;
+        }
+        /* استایل برای هدر و ویجت تاریخ و ساعت */
+header {
+    background-color: #005f73;
+    padding: 10px 20px;
+    color: white;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#date-time-widget {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #ffffff;
+    color: #005f73;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* افکت تغییر رنگ برای ویجت */
+#date-time-widget:hover {
+    background-color: #007f91;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* استایل برای منو */
+nav .menu {
+    display: flex;
+    gap: 15px;
+}
+
+nav .menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav .menu a:hover {
+    background-color: #007f91;
+    border-radius: 5px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نمایش داده‌های JSON</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      direction: rtl;
+      text-align: right;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h1>نمایش داده‌های JSON در جدول</h1>
+  <table id="roboticsTable">
+    <thead>
+      <tr>
+        <th>نام ربات</th>
+        <th>کاربرد</th>
+        <th>شرکت سازنده</th>
+        <th>کشور سازنده</th>
+        <th>سال معرفی</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- داده‌های JSON به اینجا اضافه خواهند شد -->
+    </tbody>
+  </table>
+  <script src="data.js"></script>
+</body>
+</html>

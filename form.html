@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+</head>
+<table>
+    <form action="#" method="post">
+            <tr>
+                <td>Salutation:</td>
+                <td>
+                    <select name="salutation">
+                        <option value="Mr">Mr</option>
+                        <option value="Ms">Ms</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Dr">Dr</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>First Name:</td>
+                <td><input type="text" name="first_name" required></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input type="text" name="last_name" required></td>
+            </tr>
+            <tr>
+                <td>E-mail Address:</td>
+                <td><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td>Phone Number:</td>
+                <td><input type="tel" name="phone"></td>
+            </tr>
+            <tr>
+                <td>Subject:</td>
+                <td><input type="text" name="subject"></td>
+            </tr>
+            <tr>
+                <td>Comments:</td>
+                <td><textarea name="comments" rows="5" cols="30"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label>
+                        <input type="checkbox" name="reply_request">
+                        Please check here if you wish to receive a reply.
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>
+        </table>
+</html>

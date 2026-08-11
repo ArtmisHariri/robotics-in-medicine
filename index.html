@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style1.css">
+    <script src="js/script1.js"></script>
+    <title>رباتیک در پزشکی</title>
+</head>
+<body>
+    <div class="site-container">
+        <nav>
+            <div class="menu">
+                <a href="#home">صفحه اصلی</a>2
+                <a href="data.html">رباتیک</a>
+                <a href="page4.html">ارتباط با ما</a>
+                <a href="#search">&#x1F50D;</a>
+            </div>
+            <div class="mobile-menu">
+                <i class="icofont-navigation-menu"></i>
+            </div>
+            <div class="logo"></div>
+        </nav>
+    </div>
+   <section class="hero">
+    <div class="right">
+        <div class="robotic-header">
+            <h2>نقش رباتیک در پزشکی، آینده درمان‌ها را دگرگون می‌کند.</h2>
+        </div>
+    </div>
+    <div class="left"></div>
+</section>
+<main>
+    <section>
+        <h2>نقش رباتیک در پزشکی: انقلابی در درمان و مراقبت‌های بهداشتی</h2>
+        <div class="content-section">
+            <p>رباتیک به عنوان یکی از تکنولوژی‌های پیشرو، تأثیر عمیقی بر علوم پزشکی و حوزه سلامت گذاشته است. با پیشرفت‌های چشمگیر در زمینه هوش مصنوعی و مهندسی مکانیک، ربات‌ها به ابزاری ضروری برای بهبود کیفیت درمان، کاهش خطاهای انسانی و افزایش سرعت و دقت در فرایندهای پزشکی تبدیل شده‌اند.</p>
+            <p>در ادامه به برخی از کاربردها و نقش‌های کلیدی رباتیک در پزشکی اشاره خواهیم کرد.</p>
+            <div class="image-container">
+                <img src="pics/pic1.jpg" alt="نقش رباتیک پزشکی" class="pic1">
+            </div>
+        </div>
+        <div class="content-section">
+            <h3>انواع خدمات رباتیک پزشکی</h3>
+            <p>در این بخش انواع خدمات رباتیک که در پزشکی استفاده می‌شوند توضیح داده شده است.</p>
+            <ul>
+                <li>ربات‌ها در جراحی‌های دقیق</li>
+                <li>ربات‌ها در توانبخشی و کمک به بیماران</li>
+                <li>ربات‌های تشخیصی و مراقبتی</li>
+                <li>ربات‌های داروساز</li>
+            </ul>
+            <div class="content-section">
+                <h3>اعضای رباتیک به کمک افراد می‌آید</h3>
+                <p>اعضای رباتیک، که به نام اندام‌های مصنوعی پیشرفته نیز شناخته می‌شوند، یکی از نوآوری‌های هیجان‌انگیز و تحول‌ساز در دنیای پزشکی و تکنولوژی هستند. این فناوری به انسان‌هایی که دچار نقص عضو شده‌اند یا عملکرد اندام‌هایشان به دلایلی مانند بیماری یا تصادف از دست رفته است، کمک می‌کند تا توانایی‌های خود را دوباره به دست آورند و زندگی عادی‌تری را تجربه کنند.</p>
+            </div>
+        </div>
+    </section>
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="index.html" class="active">1</a>
+        <a href="page2.html">2</a>
+        <a href="page3.html">3</a>
+        <a href="#">&raquo;</a>
+    </div>
+</main>
+    <table id="robots-table" border="1">
+    <tr>
+        <th>نام</th>
+        <th>کاربرد</th>
+        <th>سال ساخت</th>
+        <th>کشور سازنده</th>
+    </tr>
+</table>
+
+<script>
+fetch("http://localhost:5000/api/robots")
+    .then(response => response.json())
+    .then(data => {
+        let table = document.getElementById("robots-table");
+        data.forEach(robot => {
+            let row = table.insertRow();
+            row.insertCell(0).innerText = robot.name;
+            row.insertCell(1).innerText = robot.usage;
+            row.insertCell(2).innerText = robot.year;
+            row.insertCell(3).innerText = robot.country;
+        });
+    })
+    .catch(error => console.error("خطا در دریافت داده‌ها:", error));
+</script>
+<h2>لیست کاربران</h2>
+<table id="users-table" border="1">
+    <tr>
+        <th>نام کاربری</th>
+        <th>ایمیل</th>
+
+    </tr>
+</table>
+
+<script>
+fetch("http://localhost:5000/api/users")
+    .then(response => response.json())
+    .then(users => {
+        let table = document.getElementById("users-table");
+        users.forEach(user => {
+            let row = table.insertRow();
+            row.insertCell(0).innerText = user.username;
+            row.insertCell(1).innerText = user.email;
+
+            let commentsCell = row.insertCell(2);
+            commentsCell.innerText = user.comments.length > 0
+                ? user.comments.map(c => c.text).join(" | ")
+                : "بدون کامنت";
+        });
+    })
+    .catch(error => console.error("خطا در دریافت کاربران:", error));
+</script>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-top">
+            <div class="center">
+                <h3>پربازدیدترین‌ها</h3>
+                <a href=""><p>ربات‌های جراح</p></a>
+                <a href=""><p>کاربرد رباتیک در تصویربرداری پزشکی</p></a>
+                <a href=""><p>پیشرفت‌ها در ربات‌های مراقبت از بیمار</p></a>
+            </div>
+            <div class="right">
+                <h3>آخرین مقالات</h3>
+                <a href=""><p>نقش رباتیک در مدیریت بیماران دیابتی</p></a>
+                <a href=""><p>تحلیل سیستم‌های رباتیک در درمان سرطان</p></a>
+                <a href=""><p>آینده ربات‌های نانو در پزشکی</p></a>
+            </div>
+
+                <div class="social-icons">
+                    <i class="icofont-facebook"></i>
+                    <i class="icofont-twitter"></i>
+                    <i class="icofont-instagram"></i>
+                    <i class="icofont-telegram"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,178 @@
+
+        body {
+            font-family: 'Vazir', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d0e7ff;
+            color: #333;
+            line-height: 1.8;
+        }
+
+
+        .navbar {
+            background-color: #003d4c;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin-right: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #004d63;
+            border-radius: 25px;
+        }
+
+
+        .header-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+
+        .header-container .title {
+            font-size: 40px;
+            color: #005f8f;
+            margin: 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .allContent {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .side {
+            flex-basis: 30%;
+        }
+
+        .textbox {
+            background-color: #e6f7ff;
+            border: 2px solid #0099cc;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            font-size: 18px;
+            text-align: justify;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .textbox:hover {
+            transform: translateY(-8px);
+        }
+
+
+        .band {
+            flex-basis: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            overflow: hidden;
+            width: calc(48% - 10px);
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+        }
+
+        .thumb {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card article {
+            padding: 20px;
+        }
+
+        .card h1 {
+            font-size: 24px;
+            margin: 0 0 15px;
+            color: #004d63;
+            font-weight: bold;
+        }
+
+        .card span {
+            font-size: 18px;
+            color: #666;
+        }
+
+
+        .pagination {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .pagination a {
+            text-decoration: none;
+            color: #004d63;
+            padding: 10px 20px;
+            margin: 0 8px;
+            font-size: 18px;
+            border: 1px solid #004d63;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .pagination a.active {
+            background-color: #004d63;
+            color: #ffffff;
+        }
+
+        .pagination a:hover {
+            background-color: #003d4c;
+            color: #ffffff;
+        }
+
+
+        @media (max-width: 768px) {
+            .allContent {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .side, .band {
+                flex-basis: 100%;
+            }
+
+            .card {
+                width: 100%;
+            }
+        }
